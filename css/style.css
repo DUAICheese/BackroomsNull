@@ -1,0 +1,297 @@
+
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: '纳米点宋', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fafafa; /* 更浅的背景色，更符合Ins风格 */
+    background-image: url('BackroomsNull/assets/hero-bg.jpg'); /* 使用游戏截图作为背景 */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+@font-face {
+    font-family: '纳米点宋';
+    src: url('BackroomsNull/assets/纳米点宋.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 头部样式 */
+header {
+    background: rgba(255, 182, 193, 0.7); /* 淡粉红色背景 */
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-family: '纳米点宋', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* 主体内容样式 */
+main {
+    padding: 2rem 0;
+}
+
+/* 英雄区域样式 */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+    color: white;
+    position: relative;
+    background: url('BackroomsNull/assets/hero-bg.jpg') center/cover no-repeat, rgba(0, 0, 0, 0.3); /* 背景图片和半透明黑色背景 */
+    backdrop-filter: blur(5px); /* 毛玻璃效果 */
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-image {
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 二次元角色图片样式 */
+.anime-characters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.anime-character {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+}
+
+.anime-character:hover {
+    transform: scale(1.05);
+}
+
+.anime-character img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+
+/* 按钮样式 */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: rgba(255, 182, 193, 0.7); /* 淡粉红色背景 */
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3); /* 添加边框增强Ins风格 */
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    background: rgba(255, 105, 180, 0.9); /* 悬停时更亮的半透明背景 */
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+.btn.disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.btn.disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* 内容区域样式 */
+.content-section {
+    background: rgba(255, 255, 255, 0.7); /* 半透明白色背景 */
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.content-section h2 {
+    color: #ff69b4; /* 更粉的标题颜色 */
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.content-section h3 {
+    color: #764ba2;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.content-section p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.level-list, .level-order {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.level-list li, .level-order li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.screenshot {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.screenshot img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 底部样式 */
+footer {
+    background: rgba(51, 51, 51, 0.8); /* 半透明深灰色背景 */
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 80%;
+        max-width: 250px;
+    }
+    
+    .content-section {
+        padding: 1.5rem;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-link {
+        width: 80%;
+        max-width: 250px;
+        text-align: center;
+    }
+}
